@@ -252,7 +252,7 @@ export const AutocompleteDropdown = memo(
       setSearchText('')
       setSelectedItem(null)
       setIsOpened(false)
-      inputRef.current.blur()
+      inputRef?.current?.blur()
       if (typeof props.onClear === 'function') {
         props.onClear()
       }
