@@ -121,7 +121,7 @@ export const AutocompleteDropdown = memo(
 
     const _onSelectItem = useCallback(item => {
       setSelectedItem(item)
-      inputRef.current?.blur()
+      inputRef?.current?.blur?.()
       setIsOpened(false)
     }, [])
 
@@ -171,7 +171,7 @@ export const AutocompleteDropdown = memo(
     }
 
     const blur = () => {
-      inputRef.current.blur()
+      inputRef?.current?.blur?.()
     }
 
     const clear = () => {
@@ -252,7 +252,7 @@ export const AutocompleteDropdown = memo(
       setSearchText('')
       setSelectedItem(null)
       setIsOpened(false)
-      inputRef?.current?.blur()
+      inputRef?.current?.blur?.()
       if (typeof props.onClear === 'function') {
         props.onClear()
       }
@@ -311,7 +311,7 @@ export const AutocompleteDropdown = memo(
 
     const onSubmit = useCallback(
       e => {
-        inputRef.current.blur()
+        inputRef?.current?.blur?.()
         if (props.closeOnSubmit) {
           close()
         }
